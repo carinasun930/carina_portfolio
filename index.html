@@ -6,15 +6,7 @@
 <title>Carina Sun | Data Scientist & AI Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --cream: #FAF8F4;
-    --dark: #1A1A2E;
-    --accent: #7C6FCD;
-    --accent2: #C084FC;
-    --mid: #4A4A6A;
-    --light: #E8E4FF;
-    --grad: linear-gradient(135deg, #7C6FCD 0%, #C084FC 100%);
-  }
+  :root{--cream:#FAF8F4;--dark:#1A1A2E;--accent:#7C6FCD;--accent2:#C084FC;--mid:#4A4A6A;--light:#E8E4FF;--grad:linear-gradient(135deg,#7C6FCD 0%,#C084FC 100%);}
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden;}
@@ -31,58 +23,56 @@
 
   /* HERO */
   .hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px;position:relative;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%, rgba(124,111,205,.12) 0%, transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%, rgba(192,132,252,.08) 0%, transparent 60%);}
-  .blob{position:absolute;width:500px;height:500px;right:-100px;top:50%;transform:translateY(-50%);background:var(--grad);border-radius:62% 47% 82% 35%/45% 66% 38% 74%;opacity:.12;animation:morph 10s ease-in-out infinite;}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(124,111,205,.12) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 20% 80%,rgba(192,132,252,.08) 0%,transparent 60%);}
+  .blob{position:absolute;width:500px;height:500px;right:-100px;top:50%;transform:translateY(-50%);background:var(--grad);border-radius:62% 47% 82% 35%/45% 66% 38% 74%;opacity:.1;animation:morph 10s ease-in-out infinite;}
   @keyframes morph{0%,100%{border-radius:62% 47% 82% 35%/45% 66% 38% 74%;}50%{border-radius:39% 61% 47% 66%/58% 44% 60% 35%;}}
-  .hero-content{max-width:680px;position:relative;z-index:1;}
+  .hero-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;width:100%;max-width:1100px;position:relative;z-index:1;}
+  .hero-content{}
   .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--light);color:var(--accent);padding:8px 18px;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px;}
   .hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.3);}}
-  h1{font-family:'DM Serif Display',serif;font-size:clamp(3rem,6vw,5.5rem);line-height:1.05;margin-bottom:12px;color:var(--dark);}
+  h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,5rem);line-height:1.05;margin-bottom:12px;color:var(--dark);}
   h1 em{color:var(--accent);font-style:italic;}
-  .hero-sub{font-size:1.15rem;color:var(--mid);line-height:1.7;margin:24px 0 40px;font-weight:300;max-width:540px;}
+  .hero-sub{font-size:1.1rem;color:var(--mid);line-height:1.7;margin:24px 0 40px;font-weight:300;max-width:540px;}
   .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
   .btn-primary{background:var(--grad);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(124,111,205,.35);}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(124,111,205,.45);}
   .btn-secondary{border:2px solid var(--accent);color:var(--accent);padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s;}
   .btn-secondary:hover{background:var(--accent);color:#fff;}
-  .hero-stats{display:flex;gap:48px;margin-top:60px;padding-top:40px;border-top:1px solid rgba(124,111,205,.15);}
-  .stat-num{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--dark);}
-  .stat-num span{color:var(--accent);}
-  .stat-label{font-size:.82rem;color:var(--mid);font-weight:500;margin-top:2px;text-transform:uppercase;letter-spacing:.05em;}
 
-  /* SECTIONS */
-  section{padding:100px 60px;}
+  /* LOGOS */
+  .hero-logos{margin-top:52px;padding-top:36px;border-top:1px solid rgba(124,111,205,.15);}
+  .logos-label{font-size:.75rem;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:.1em;margin-bottom:20px;opacity:.6;}
+  .logos-row{display:flex;gap:32px;align-items:center;flex-wrap:wrap;}
+  .logo-pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(124,111,205,.15);border-radius:50px;padding:10px 20px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+  .logo-icon{font-size:1.2rem;}
+  .logo-name{font-size:.85rem;font-weight:700;color:var(--dark);}
+
+  /* PHOTO */
+  .hero-photo-wrap{position:relative;flex-shrink:0;}
+  .hero-photo{width:320px;height:400px;object-fit:cover;object-position:center top;border-radius:32px;display:block;position:relative;z-index:1;}
+  .photo-border{position:absolute;inset:-8px;border-radius:38px;background:var(--grad);z-index:0;opacity:.25;}
+  .photo-dot{position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;background:var(--light);border-radius:50%;z-index:0;}
+
+  /* ABOUT */
+  .about{background:#fff;padding:100px 60px;}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto;}
   .section-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
   .section-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--dark);margin-bottom:20px;}
   .section-title em{color:var(--accent);font-style:italic;}
-
-  /* ABOUT */
-  .about{background:#fff;}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto;}
-  .about-visual{position:relative;}
-  .about-card{background:var(--dark);border-radius:24px;padding:40px;color:#fff;position:relative;overflow:hidden;}
-  .about-card::after{content:'';position:absolute;bottom:-30px;right:-30px;width:180px;height:180px;background:var(--grad);border-radius:50%;opacity:.25;}
-  .about-card-name{font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:6px;}
-  .about-card-title{font-size:.85rem;color:rgba(255,255,255,.6);font-weight:400;margin-bottom:24px;}
-  .about-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-  .badge{background:rgba(124,111,205,.2);border:1px solid rgba(124,111,205,.4);color:var(--accent2);padding:6px 14px;border-radius:50px;font-size:.78rem;font-weight:600;}
-  .about-mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden;margin-top:24px;}
-  .mini-stat{background:rgba(255,255,255,.04);padding:16px;text-align:center;}
-  .mini-stat-n{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#fff;}
-  .mini-stat-l{font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
-  .about-text{color:var(--mid);line-height:1.8;font-size:1.02rem;}
+  .about-text{color:var(--mid);line-height:1.8;font-size:1rem;}
   .about-text p{margin-bottom:18px;}
-  .edu-block{background:var(--light);border-radius:16px;padding:24px;margin-top:28px;}
+  .edu-block{display:flex;flex-direction:column;gap:16px;margin-top:28px;}
+  .edu-item{background:var(--light);border-radius:16px;padding:22px 24px;}
   .edu-school{font-weight:700;color:var(--dark);font-size:.95rem;}
-  .edu-deg{color:var(--mid);font-size:.88rem;margin-top:4px;}
-  .edu-detail{font-size:.8rem;color:var(--accent);font-weight:600;margin-top:6px;}
+  .edu-deg{color:var(--mid);font-size:.85rem;margin-top:4px;line-height:1.5;}
+  .edu-detail{font-size:.78rem;color:var(--accent);font-weight:600;margin-top:6px;}
 
   /* SKILLS */
-  .skills{background:var(--dark);color:#fff;}
+  .skills{background:var(--dark);color:#fff;padding:100px 60px;}
   .skills .section-label{color:var(--accent2);}
   .skills .section-title{color:#fff;}
-  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1100px;margin:48px auto 0;}
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:48px auto 0;}
   .skill-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;transition:transform .3s,border-color .3s;}
   .skill-card:hover{transform:translateY(-4px);border-color:rgba(124,111,205,.4);}
   .skill-icon{font-size:2rem;margin-bottom:16px;}
@@ -91,26 +81,21 @@
   .skill-tag{background:rgba(124,111,205,.15);border:1px solid rgba(124,111,205,.25);color:rgba(255,255,255,.8);padding:5px 12px;border-radius:50px;font-size:.77rem;font-weight:500;}
 
   /* EXPERIENCE */
-  .experience{background:var(--cream);}
-  .exp-list{max-width:900px;margin:48px auto 0;display:flex;flex-direction:column;gap:0;}
-  .exp-item{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:40px 0;border-bottom:1px solid rgba(124,111,205,.12);position:relative;}
+  .experience{background:var(--cream);padding:100px 60px;}
+  .exp-list{max-width:900px;margin:48px auto 0;display:flex;flex-direction:column;}
+  .exp-item{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:36px 0;border-bottom:1px solid rgba(124,111,205,.12);}
   .exp-item:last-child{border-bottom:none;}
-  .exp-item::before{content:'';position:absolute;left:195px;top:0;bottom:0;width:2px;background:rgba(124,111,205,.1);}
   .exp-meta{text-align:right;}
-  .exp-date{font-size:.8rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;}
-  .exp-loc{font-size:.78rem;color:var(--mid);margin-top:4px;}
-  .exp-company{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--dark);margin-bottom:4px;}
-  .exp-role{font-size:.85rem;font-weight:600;color:var(--accent);background:var(--light);padding:4px 12px;border-radius:50px;display:inline-block;margin-bottom:16px;}
-  .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;}
-  .exp-bullets li{font-size:.9rem;color:var(--mid);line-height:1.65;padding-left:18px;position:relative;}
-  .exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .exp-date{font-size:.78rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;}
+  .exp-loc{font-size:.75rem;color:var(--mid);margin-top:4px;}
+  .exp-company{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--dark);margin-bottom:6px;}
+  .exp-role{font-size:.82rem;font-weight:600;color:var(--accent);background:var(--light);padding:4px 12px;border-radius:50px;display:inline-block;margin-bottom:12px;}
+  .exp-desc{font-size:.9rem;color:var(--mid);line-height:1.7;}
 
   /* PROJECTS */
-  .projects{background:#fff;}
-  .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;max-width:1100px;margin:48px auto 0;}
+  .projects{background:#fff;padding:100px 60px;}
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1100px;margin:48px auto 0;}
   .proj-card{border:1px solid rgba(124,111,205,.15);border-radius:24px;padding:36px;transition:all .3s;position:relative;overflow:hidden;}
-  .proj-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s;}
-  .proj-card:hover::before{opacity:.03;}
   .proj-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 20px 48px rgba(124,111,205,.12);}
   .proj-num{font-family:'DM Serif Display',serif;font-size:3.5rem;color:rgba(124,111,205,.12);line-height:1;margin-bottom:12px;}
   .proj-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--dark);margin-bottom:12px;line-height:1.3;}
@@ -119,7 +104,7 @@
   .proj-tag{background:var(--light);color:var(--accent);padding:4px 12px;border-radius:50px;font-size:.75rem;font-weight:600;}
 
   /* CONTACT */
-  .contact{background:var(--dark);color:#fff;text-align:center;}
+  .contact{background:var(--dark);color:#fff;text-align:center;padding:100px 60px;}
   .contact .section-label{color:var(--accent2);}
   .contact .section-title{color:#fff;max-width:600px;margin:0 auto 20px;}
   .contact-sub{color:rgba(255,255,255,.5);font-size:1rem;margin-bottom:48px;}
@@ -133,28 +118,29 @@
   .form-group textarea{resize:vertical;min-height:120px;}
   .submit-btn{background:var(--grad);color:#fff;border:none;padding:16px 40px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(124,111,205,.35);align-self:center;margin-top:8px;}
   .submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(124,111,205,.5);}
-  .contact-links{display:flex;justify-content:center;gap:32px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.08);}
-  .contact-link{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:8px;}
+  .contact-links{display:flex;justify-content:center;gap:32px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;}
+  .contact-link{color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s;}
   .contact-link:hover{color:var(--accent2);}
 
-  /* FOOTER */
   footer{background:var(--dark);padding:24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);}
   .footer-copy{font-size:.8rem;color:rgba(255,255,255,.3);}
   .footer-brand{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,.5);}
 
-  /* RESPONSIVE */
-  @media(max-width:900px){
-    nav{padding:16px 24px;}
-    .nav-links{display:none;}
-    .hero,.section{padding:80px 24px;}
-    section{padding:80px 24px;}
+  @media(max-width:1000px){
+    .skills-grid{grid-template-columns:repeat(2,1fr);}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-photo-wrap{display:none;}
     .about-grid{grid-template-columns:1fr;}
-    .exp-item{grid-template-columns:1fr;gap:8px;}
-    .exp-item::before{display:none;}
+  }
+  @media(max-width:700px){
+    nav{padding:16px 20px;}
+    .nav-links{display:none;}
+    .hero,.about,.skills,.experience,.projects,.contact{padding:80px 24px;}
+    .exp-item{grid-template-columns:1fr;gap:6px;}
     .exp-meta{text-align:left;}
+    .skills-grid{grid-template-columns:1fr;}
     .form-row{grid-template-columns:1fr;}
     footer{flex-direction:column;gap:8px;text-align:center;}
-    .hero-stats{gap:28px;}
   }
 </style>
 </head>
@@ -170,35 +156,36 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:as13537@nyu.edu" class="nav-cta">Get in Touch</a>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="blob"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Available for full-time roles</div>
-    <h1>Hi, I'm <em>Carina Sun.</em></h1>
-    <h1>Data Scientist &amp;<br/>AI Engineer.</h1>
-    <p class="hero-sub">I specialize in agentic AI systems, LLM pipelines, and scalable analytics platforms — blending behavioral science with applied machine learning to build human-centered AI.</p>
-    <div class="hero-btns">
-      <a href="#experience" class="btn-primary">View My Work</a>
-      <a href="#contact" class="btn-secondary">Contact Me</a>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">Available for full-time roles · May 2026</div>
+      <h1>Hi, I'm <em>Carina Sun.</em></h1>
+      <h1>Data Scientist &amp;<br/>AI Engineer.</h1>
+      <p class="hero-sub">I specialize in agentic AI systems, LLM pipelines, and scalable analytics platforms — blending behavioral science with applied machine learning to build human-centered AI.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+      <div class="hero-logos">
+        <div class="logos-label">Experience at</div>
+        <div class="logos-row">
+          <div class="logo-pill"><span class="logo-icon">📦</span><span class="logo-name">Amazon</span></div>
+          <div class="logo-pill"><span class="logo-icon">🌐</span><span class="logo-name">United Nations</span></div>
+          <div class="logo-pill"><span class="logo-icon">🎓</span><span class="logo-name">NYU</span></div>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">3<span>+</span></div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div>
-        <div class="stat-num">65<span>%</span></div>
-        <div class="stat-label">Data Velocity Gain @ Amazon</div>
-      </div>
-      <div>
-        <div class="stat-num">50<span>K+</span></div>
-        <div class="stat-label">Records Processed @ UN</div>
-      </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-border"></div>
+      <div class="photo-dot"></div>
+      <img src="Subject.jpg" alt="Carina Sun" class="hero-photo"/>
     </div>
   </div>
 </section>
@@ -206,37 +193,29 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
-    <div class="about-visual">
-      <div class="about-card">
-        <div class="about-card-name">Carina Sun</div>
-        <div class="about-card-title">MS Data Science · NYU | Exp. May 2026</div>
-        <div class="about-badges">
-          <span class="badge">Amazon</span>
-          <span class="badge">United Nations</span>
-          <span class="badge">NYU TA</span>
-          <span class="badge">GPA 3.85</span>
-        </div>
-        <div class="about-mini-stats">
-          <div class="mini-stat"><div class="mini-stat-n">90%+</div><div class="mini-stat-l">Error Reduction</div></div>
-          <div class="mini-stat"><div class="mini-stat-n">85%</div><div class="mini-stat-l">Anomaly Precision</div></div>
-          <div class="mini-stat"><div class="mini-stat-n">200+</div><div class="mini-stat-l">Analyst hrs Saved</div></div>
-          <div class="mini-stat"><div class="mini-stat-n">3×</div><div class="mini-stat-l">Platform Scaled</div></div>
-        </div>
-      </div>
-    </div>
     <div>
       <div class="section-label">About Me</div>
       <h2 class="section-title">Where Data Meets <em>Human Insight</em></h2>
       <div class="about-text">
-        <p>I'm a Data Scientist & AI Engineer currently completing my Master's in Data Science at NYU, with a background rooted in both rigorous quantitative methods and the psychological nuances of human behavior.</p>
+        <p>I'm a Data Scientist & AI Engineer completing my Master's in Data Science at NYU, with a background rooted in both rigorous quantitative methods and the psychological nuances of human behavior.</p>
         <p>My work spans production ETL systems at Amazon, multi-agent AI architectures at the United Nations, and ML research on large language models — always with an emphasis on building systems that are not just powerful, but purposeful.</p>
-        <p>I believe the best AI is built with humans in mind. My background in psychology gives me an edge in designing models that account for behavioral patterns, not just data patterns.</p>
+        <p>My background in psychology gives me an edge in designing models that account for behavioral patterns, not just data patterns.</p>
       </div>
+    </div>
+    <div>
+      <div class="section-label">Education</div>
       <div class="edu-block">
-        <div class="edu-school">🎓 New York University</div>
-        <div class="edu-deg">MS in Data Science — Expected May 2026</div>
-        <div class="edu-deg" style="margin-top:14px;">BA in Psychology (Honors), Minor in Math & CS</div>
-        <div class="edu-detail">Presidential Honors Scholar · GPA 3.85 · Dean's List</div>
+        <div class="edu-item">
+          <div class="edu-school">🎓 New York University</div>
+          <div class="edu-deg">Master of Science in Data Science</div>
+          <div class="edu-deg">Machine Learning · Deep Learning · NLP · Causal Inference · Big Data Systems</div>
+          <div class="edu-detail">Expected May 2026</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-school">🎓 New York University</div>
+          <div class="edu-deg">BA in Psychology (Honors) · Minor in Math & Computer Science · Business Studies</div>
+          <div class="edu-detail">GPA 3.85 · Presidential Honors Scholar · Dean's List · Dean's Undergraduate Research Fund</div>
+        </div>
       </div>
     </div>
   </div>
@@ -244,7 +223,7 @@
 
 <!-- SKILLS -->
 <section class="skills" id="skills">
-  <div style="text-align:center;max-width:600px;margin:0 auto 0;">
+  <div style="text-align:center;max-width:600px;margin:0 auto;">
     <div class="section-label">Technical Skills</div>
     <h2 class="section-title">Built to <em>Build</em></h2>
   </div>
@@ -260,7 +239,7 @@
       <div class="skill-icon">🤖</div>
       <div class="skill-cat">Machine Learning & AI</div>
       <div class="skill-tags">
-        <span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">Causal Inference</span><span class="skill-tag">Behavioral Modeling</span><span class="skill-tag">A/B Testing</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span>
+        <span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">A/B Testing</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">XGBoost</span>
       </div>
     </div>
     <div class="skill-card">
@@ -277,6 +256,20 @@
         <span class="skill-tag">AWS (S3, Redshift)</span><span class="skill-tag">Spark</span><span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span><span class="skill-tag">ETL Pipelines</span><span class="skill-tag">Hadoop</span>
       </div>
     </div>
+    <div class="skill-card">
+      <div class="skill-icon">📊</div>
+      <div class="skill-cat">Statistical Models</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Causal Inference</span><span class="skill-tag">Behavioral Modeling</span><span class="skill-tag">Computational Modeling</span><span class="skill-tag">Regression Analysis</span><span class="skill-tag">Psychometrics</span><span class="skill-tag">Experimental Design</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🎤</div>
+      <div class="skill-cat">Tutoring & Communication</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Graduate ML Instruction</span><span class="skill-tag">Technical Mentorship</span><span class="skill-tag">Executive Presentations</span><span class="skill-tag">Curriculum Design</span><span class="skill-tag">Cross-functional Collab</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -287,7 +280,6 @@
     <h2 class="section-title">Where I've <em>Made Impact</em></h2>
   </div>
   <div class="exp-list">
-
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-date">May – Aug 2025</div>
@@ -296,15 +288,9 @@
       <div>
         <div class="exp-company">Amazon</div>
         <div class="exp-role">Business Intelligence Engineer</div>
-        <ul class="exp-bullets">
-          <li>Architected high-throughput ETL pipelines using Python, SQL, and AWS (S3, Redshift), increasing data velocity by <strong>65%</strong> and reducing entry errors by <strong>90%+</strong>.</li>
-          <li>Engineered API integrations to scale platform to <strong>3× more suppliers</strong>, projected to save <strong>500+ annualized engineering hours</strong>.</li>
-          <li>Developed an XGBoost model to predict supplier churn and delivery delays, achieving a <strong>12% precision improvement</strong> over baseline heuristics.</li>
-          <li>Presented behavioral analytics to <strong>L8+ executive leadership</strong>, directly influencing the Supplier Track roadmap and reducing stakeholder data latency by <strong>45%</strong>.</li>
-        </ul>
+        <div class="exp-desc">Built production ETL pipelines and predictive models to automate supplier evaluations, drive executive strategy, and scale platform capacity — delivering measurable improvements in data velocity, error reduction, and operational efficiency.</div>
       </div>
     </div>
-
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-date">Sep 2025 – Present</div>
@@ -313,14 +299,9 @@
       <div>
         <div class="exp-company">United Nations</div>
         <div class="exp-role">AI Engineer, Capstone</div>
-        <ul class="exp-bullets">
-          <li>Architecting a modular multi-agent analytics system using LangGraph to automate data cleaning, EDA, and anomaly detection across <strong>50K+ procurement records spanning 12 countries</strong>.</li>
-          <li>Orchestrating self-debugging agent loops across 4 specialized agents, reducing iterative debugging time by <strong>~60%</strong>.</li>
-          <li>Implementing Isolation Forest & DBSCAN on <strong>$3M+ procurement transactions</strong>, achieving ~85% precision on audit-verified outliers and saving <strong>~200 analyst-hours per audit cycle</strong>.</li>
-        </ul>
+        <div class="exp-desc">Architecting a modular multi-agent AI system with LangGraph to automate data analysis and anomaly detection across international procurement records, significantly reducing manual audit time.</div>
       </div>
     </div>
-
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-date">Sep 2025 – Present</div>
@@ -328,14 +309,10 @@
       </div>
       <div>
         <div class="exp-company">New York University</div>
-        <div class="exp-role">Teaching Assistant, ML (Graduate)</div>
-        <ul class="exp-bullets">
-          <li>Simplifying complex algorithms (Neural Networks, SVMs) for <strong>100+ graduate students</strong>.</li>
-          <li>Mentoring on model design, evaluation, and debugging with Python, PyTorch, and scikit-learn.</li>
-        </ul>
+        <div class="exp-role">Teaching Assistant, Graduate ML</div>
+        <div class="exp-desc">Supporting 100+ graduate students in Introduction to Machine Learning — simplifying complex concepts and mentoring on real-world model design and debugging workflows.</div>
       </div>
     </div>
-
     <div class="exp-item">
       <div class="exp-meta">
         <div class="exp-date">Jun – Aug 2023</div>
@@ -344,13 +321,9 @@
       <div>
         <div class="exp-company">Omnicom Media Group</div>
         <div class="exp-role">Marketing Data Analyst</div>
-        <ul class="exp-bullets">
-          <li>Designed ETL pipelines in Python and SQL to integrate ad metrics into a centralized warehouse; built dynamic Tableau dashboards.</li>
-          <li>Conducted A/B testing on media buy strategies, driving a <strong>12% ROI improvement</strong>.</li>
-        </ul>
+        <div class="exp-desc">Designed ETL pipelines and Tableau dashboards to centralize ad performance data, and ran A/B tests on media buy strategies to optimize campaign ROI.</div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -364,19 +337,19 @@
     <div class="proj-card">
       <div class="proj-num">01</div>
       <div class="proj-title">Knowledge Distillation & In-Context Learning in LLMs</div>
-      <div class="proj-desc">Built an end-to-end evaluation pipeline using PyTorch and Hugging Face to compare distilled vs. base LLaMA-3.1 8B models across NLI, sentiment analysis, and QA tasks. Designed robustness metrics by injecting randomized labels — revealing distilled models achieve +1–4% accuracy gains but higher vulnerability to noisy data.</div>
+      <div class="proj-desc">End-to-end evaluation pipeline comparing distilled vs. base LLaMA-3.1 8B models across NLI, sentiment analysis, and QA. Designed robustness metrics revealing accuracy-vs-noise tradeoffs in distilled models.</div>
       <div class="proj-tags"><span class="proj-tag">PyTorch</span><span class="proj-tag">LLaMA-3.1</span><span class="proj-tag">Hugging Face</span><span class="proj-tag">NLP</span></div>
     </div>
     <div class="proj-card">
       <div class="proj-num">02</div>
-      <div class="proj-title">Multi-Agent Procurement Analytics System (UN)</div>
-      <div class="proj-desc">Designed a modular LangGraph system with 4 specialized agents for automated data cleaning, exploratory analysis, and anomaly detection at scale. Achieved ~85% precision in flagging financial irregularities across $3M+ in procurement data from 12 countries.</div>
+      <div class="proj-title">Multi-Agent Procurement Analytics (UN)</div>
+      <div class="proj-desc">Modular LangGraph system with 4 specialized agents for automated data cleaning, EDA, and financial anomaly detection across $3M+ in procurement data from 12 countries.</div>
       <div class="proj-tags"><span class="proj-tag">LangGraph</span><span class="proj-tag">Isolation Forest</span><span class="proj-tag">DBSCAN</span><span class="proj-tag">Multi-Agent AI</span></div>
     </div>
     <div class="proj-card">
       <div class="proj-num">03</div>
       <div class="proj-title">Supplier Intelligence Platform (Amazon)</div>
-      <div class="proj-desc">End-to-end production ETL and predictive modeling system for supplier performance. XGBoost churn model improved precision by 12%; pipeline scaled platform capacity 3× and saved 500+ engineering hours annually.</div>
+      <div class="proj-desc">Production ETL and XGBoost churn prediction system that scaled platform capacity 3× and drove significant gains in data velocity, precision, and engineering efficiency.</div>
       <div class="proj-tags"><span class="proj-tag">XGBoost</span><span class="proj-tag">AWS</span><span class="proj-tag">ETL</span><span class="proj-tag">Python</span></div>
     </div>
   </div>
@@ -389,29 +362,17 @@
   <p class="contact-sub">Open to full-time roles starting May 2026 — Data Science, AI Engineering, and ML.</p>
   <form class="contact-form" onsubmit="handleSubmit(event)">
     <div class="form-row">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" placeholder="Your name"/>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="your@email.com"/>
-      </div>
+      <div class="form-group"><label>Name</label><input type="text" placeholder="Your name"/></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
     </div>
-    <div class="form-group">
-      <label>Subject</label>
-      <input type="text" placeholder="Opportunity, collaboration, etc."/>
-    </div>
-    <div class="form-group">
-      <label>Message</label>
-      <textarea placeholder="Tell me about the role or project..."></textarea>
-    </div>
+    <div class="form-group"><label>Subject</label><input type="text" placeholder="Opportunity, collaboration, etc."/></div>
+    <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the role or project..."></textarea></div>
     <button type="submit" class="submit-btn">Send Message ✦</button>
   </form>
   <div class="contact-links">
     <a href="mailto:as13537@nyu.edu" class="contact-link">✉ as13537@nyu.edu</a>
     <a href="tel:+16179229188" class="contact-link">📞 +1 (617) 922-9188</a>
-    <a href="https://www.linkedin.com" target="_blank" class="contact-link">🔗 LinkedIn</a>
+    <a href="https://linkedin.com" target="_blank" class="contact-link">🔗 LinkedIn</a>
     <a href="https://github.com" target="_blank" class="contact-link">🐙 GitHub</a>
   </div>
 </section>
@@ -424,17 +385,13 @@
 <script>
 function handleSubmit(e){
   e.preventDefault();
-  const btn = e.target.querySelector('.submit-btn');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+  const btn=e.target.querySelector('.submit-btn');
+  btn.textContent='Message Sent ✓';
+  btn.style.background='linear-gradient(135deg,#22c55e,#16a34a)';
   setTimeout(()=>{btn.textContent='Send Message ✦';btn.style.background='';},3000);
 }
-
-// Scroll reveal
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(el=>{
-    if(el.isIntersecting){el.target.style.opacity=1;el.target.style.transform='translateY(0)';}
-  });
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(el=>{if(el.isIntersecting){el.target.style.opacity=1;el.target.style.transform='translateY(0)';}});
 },{threshold:0.1});
 document.querySelectorAll('.exp-item,.proj-card,.skill-card').forEach(el=>{
   el.style.opacity=0;el.style.transform='translateY(24px)';el.style.transition='opacity .5s ease,transform .5s ease';
