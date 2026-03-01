@@ -166,7 +166,8 @@
   @media(max-width:1000px){
     .hero-inner{grid-template-columns:1fr;padding:0 32px;}
     .hero-content{padding-right:0;}
-    .hero-photo-col{display:none;}
+    .hero-photo-col{display:flex;justify-content:center;margin-top:40px;}
+    .hero-photo-wrap{width:min(360px,100%);height:auto;aspect-ratio:360/460;max-width:100%;}
     .skills-grid,.tutor-grid{grid-template-columns:repeat(2,1fr);}
     .about-grid,.research-grid{grid-template-columns:1fr;}
   }
@@ -174,6 +175,7 @@
     nav{padding:16px 20px;}
     .nav-links{display:none;}
     section{padding:72px 24px;}
+    .hero-photo-wrap{width:min(320px,100%);margin:0 auto;}
     .exp-item{grid-template-columns:1fr;gap:6px;}
     .exp-meta{text-align:left;}
     .skills-grid,.tutor-grid{grid-template-columns:1fr;}
