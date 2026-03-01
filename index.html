@@ -97,6 +97,11 @@
   .exp-company{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--dark);margin-bottom:6px;}
   .exp-role{font-size:.8rem;font-weight:600;color:var(--accent);background:var(--light);padding:4px 12px;border-radius:50px;display:inline-block;margin-bottom:10px;}
   .exp-desc{font-size:.9rem;color:var(--mid);line-height:1.7;}
+  .exp-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}
+  .exp-stat{background:var(--dark);border-radius:14px;padding:10px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:90px;}
+  .exp-stat-num{font-family:'DM Serif Display',serif;font-size:1.2rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;line-height:1.1;}
+  .exp-stat-label{font-size:.7rem;color:rgba(255,255,255,.45);font-weight:500;text-transform:uppercase;letter-spacing:.04em;}
+
 
   /* TUTORING */
   .tutoring{background:#fff;}
@@ -321,7 +326,13 @@
       <div>
         <div class="exp-company">Amazon</div>
         <div class="exp-role">Business Intelligence Engineer</div>
-        <div class="exp-desc">Built production ETL pipelines and predictive models to automate supplier evaluations, drive executive strategy, and scale platform capacity — delivering measurable improvements in data velocity, error reduction, and operational efficiency.</div>
+        <div class="exp-desc">Built production ETL pipelines and predictive models to automate supplier evaluations, drive executive strategy, and scale platform capacity.</div>
+        <div class="exp-stats">
+          <div class="exp-stat"><span class="exp-stat-num">↑65%</span><span class="exp-stat-label">Data Velocity</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">↓90%+</span><span class="exp-stat-label">Entry Errors</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">3×</span><span class="exp-stat-label">Platform Scale</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">500+</span><span class="exp-stat-label">Eng. Hrs Saved</span></div>
+        </div>
       </div>
     </div>
     <div class="exp-item">
@@ -329,7 +340,13 @@
       <div>
         <div class="exp-company">United Nations</div>
         <div class="exp-role">AI Engineer, Capstone</div>
-        <div class="exp-desc">Architecting a modular multi-agent AI system with LangGraph to automate data analysis and anomaly detection across international procurement records, significantly reducing manual audit time.</div>
+        <div class="exp-desc">Architecting a modular multi-agent AI system with LangGraph to automate data analysis and anomaly detection across international procurement records.</div>
+        <div class="exp-stats">
+          <div class="exp-stat"><span class="exp-stat-num">50K+</span><span class="exp-stat-label">Records</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">~85%</span><span class="exp-stat-label">Anomaly Precision</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">↓60%</span><span class="exp-stat-label">Debug Time</span></div>
+          <div class="exp-stat"><span class="exp-stat-num">200+</span><span class="exp-stat-label">Analyst Hrs Saved</span></div>
+        </div>
       </div>
     </div>
     <div class="exp-item">
@@ -338,6 +355,9 @@
         <div class="exp-company">Omnicom Media Group</div>
         <div class="exp-role">Marketing Data Analyst</div>
         <div class="exp-desc">Designed ETL pipelines and Tableau dashboards to centralize ad performance data, and ran A/B tests on media buy strategies to optimize campaign ROI.</div>
+        <div class="exp-stats">
+          <div class="exp-stat"><span class="exp-stat-num">↑12%</span><span class="exp-stat-label">ROI Improvement</span></div>
+        </div>
       </div>
     </div>
   </div>
